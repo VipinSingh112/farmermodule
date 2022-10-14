@@ -1,0 +1,36 @@
+package FarmApplicationForm.portlet;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
+import com.liferay.portal.kernel.util.ParamUtil;
+
+import javax.portlet.PortletException;
+import javax.portlet.ResourceRequest;
+import javax.portlet.ResourceResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+import FarmApplicationForm.constants.ComNbpFarmApplicationFormWebPortletKeys;
+
+@Component(
+		immediate=true,
+		property = {
+		"javax.portlet.name=" + ComNbpFarmApplicationFormWebPortletKeys.COMNBPFARMAPPLICATIONFORMWEB,
+		"mvc.command.name=/livestock/practice/form"
+		},
+		service = MVCResourceCommand.class
+	)
+public class LivestockPracticeResourceCommand implements MVCResourceCommand {
+
+	@Override
+	public boolean serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
+			throws PortletException {
+		String husbandry=ParamUtil.getString(resourceRequest,"husbandry");
+		String livestockManage=ParamUtil.getString(resourceRequest,"livestockManage");
+		String nutrient=ParamUtil.getString(resourceRequest,"nutrient");
+		String water=ParamUtil.getString(resourceRequest,"water");
+		String postHarvest=ParamUtil.getString(resourceRequest,"postHarvest");
+		String remarks=ParamUtil.getString(resourceRequest,"remarks");
+		return false;
+	}
+
+}
