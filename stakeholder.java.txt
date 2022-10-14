@@ -1,0 +1,57 @@
+package FarmApplicationForm.portlet;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
+import com.liferay.portal.kernel.util.ParamUtil;
+
+import javax.portlet.PortletException;
+import javax.portlet.ResourceRequest;
+import javax.portlet.ResourceResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+import FarmApplicationForm.constants.ComNbpFarmApplicationFormWebPortletKeys;
+
+@Component(
+		immediate = true,
+		property= {
+				"javax.portlet.name=" + ComNbpFarmApplicationFormWebPortletKeys.COMNBPFARMAPPLICATIONFORMWEB,
+                 "mvc.command.name=stakeholderform"
+		},
+		service=MVCResourceCommand.class
+		)
+public class StakeHolderResourceCommand implements MVCResourceCommand {
+
+	@Override
+	public boolean serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
+			throws PortletException {
+		// TODO Auto-generated method stub
+		String companyName=ParamUtil.getString(resourceRequest,"companyname");
+		String firstName=ParamUtil.getString(resourceRequest,"firstname");
+		String middleName=ParamUtil.getString(resourceRequest,"middlename");
+		String lastName=ParamUtil.getString(resourceRequest,"lastname");
+		String alias=ParamUtil.getString(resourceRequest,"alias");
+		String residentialStreetName=ParamUtil.getString(resourceRequest,"residentialstreet");
+		String residentialDistrict=ParamUtil.getString(resourceRequest,"residentialdistric");
+		String residentialPostOffice=ParamUtil.getString(resourceRequest,"residentialpostoffice");
+		String residentialParish=ParamUtil.getString(resourceRequest,"residentialparish");
+		String residentialTelephone=ParamUtil.getString(resourceRequest,"residentialtelephonenumber");
+		String businessStreetName=ParamUtil.getString(resourceRequest,"businessstreetname");
+		String businessDistrict=ParamUtil.getString(resourceRequest,"businessdistrict");
+		String businessPostOffice=ParamUtil.getString(resourceRequest,"businesspostoffice");
+		String businessParish=ParamUtil.getString(resourceRequest,"businessparish");
+		
+		
+		String businessTelephoneNumber=ParamUtil.getString(resourceRequest,"businesstelephone");
+		String idType=ParamUtil.getString(resourceRequest,"idtype");
+		String idNumber=ParamUtil.getString(resourceRequest,"idnumber");
+		String gender=ParamUtil.getString(resourceRequest,"gender");
+		String dateOfBirth=ParamUtil.getString(resourceRequest,"dateofbirth");
+		String trn=ParamUtil.getString(resourceRequest,"trn");
+		String cellPhoneNumber=ParamUtil.getString(resourceRequest,"cellphone");
+		String fax=ParamUtil.getString(resourceRequest,"fax");
+		String email=ParamUtil.getString(resourceRequest,"email");
+
+		return false;
+	}
+
+}

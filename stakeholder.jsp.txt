@@ -1,0 +1,268 @@
+<portlet:resourceURL var="stakeHolderForm" id="stakeholderform"></portlet:resourceURL>
+<form>
+<div class="tab-pane active" role="tabpanel" id="childStep1">
+	<div class="tab-form">
+		<div class="company-info-form">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="tab-form-title f2">Stakeholder Information</p>
+					<p class="tab-form-title-subtitle f2">In this section you will provide general information about Stakeholder</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Company Name (If Any):</p>
+						<input type="text" class="form-control" id="companyName" aria-describedby="companyHelp" name="<portlet:namespae/>companyname" placeholder="Example Company LTD" value=""/>
+						<p id="companyHelp" class="tab-form-sub-heading">Lower-case / upper-case letters don't matter. Please include the corporate identifier such as "LLC" or "LTD".</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">First Name</p>
+						<input type="text" class="form-control" id="firstName" placeholder="" value="" name="<portlet:namespae/>firstname"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading" for="middleName">Middle Name</p>
+						<input type="text" class="form-control" id="middleName" placeholder="" value=""/ name="<portlet:namespae/>middlename">
+					</div>				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Last Name</p>
+						<input type="text" class="form-control" id="lastName" placeholder="" value=""name="<portlet:namespae/>lastname"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Alias</p>
+						<input type="text" class="form-control" id="alias" placeholder="" value=""name="<portlet:namespae/>alias"/>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group mb-0">
+						<p class="tab-form-main-heading mb-0">Residential Address</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Street Name / Apt.</p>
+						<input type="text" class="form-control" id="residential-steet" placeholder="Kingston Street" value=""name="<portlet:namespae/>residentialstreet"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">District</p>
+						<input type="text" class="form-control" id="residential-district" placeholder="Kingston" value=""name="<portlet:namespae/>residentialdistrict"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Post Office</p>
+						<input type="text" class="form-control" id="residential-post-ofc" placeholder="Kingston" value="" name="<portlet:namespae/>residentialpostoffice"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group mt-2">
+						<p class="tab-form-sub-heading">Parish</p>
+						<div class="select-wrapper position-relative">
+							<select class="form-select form-control" name="<portlet:namespae/>residentialparish" id="residential-parish">
+								<option value="Kingston Parish">Kingston Parish</option>	
+								<option value="St. Andrew" >St. Andrew</option>	
+								<option value="Portland">Portland</option>	
+								<option value="St. Thomas">St. Thomas</option>	
+								<option value="St. Catherine">St. Catherine</option>	
+								<option value="St. Mary" >St. Mary</option>	
+								<option value="St. Ann">St. Ann</option>	
+								<option value="Manchester">Manchester</option>	
+								<option value="Clarendon">Clarendon</option>	
+								<option value="Hanover">Hanover</option>	
+								<option value="Westmoreland">Westmoreland</option>	
+								<option value="St. James">St. James</option>	
+								<option value="Trelawny">Trelawny</option>	
+								<option value="St. Elizabeth">St. Elizabeth</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Telephone Number</p>
+						<input type="text" class="form-control" id="residential-telephone" name="<portlet:namespae/>residentialtelephonenumber" placeholder="+1 876-876-1234" value=""/>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group mb-0">
+						<p class="tab-form-main-heading mb-0">Business Address</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Street Name / Apt.</p>
+						<input type="text" class="form-control" id="business-steet" placeholder="Kingston Street" value="" name="<portlet:namespae/>businessstreetname"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">District</p>
+						<input type="text" class="form-control" id="business-district" placeholder="Kingston" value="" name="<portlet:namespae/>businessdistrict" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Post Office</p>
+						<input type="text" class="form-control" id="business-post-ofc" placeholder="Kingston" value="" name="<portlet:namespae/>businesspostoffice"/>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group mt-2">
+						<p class="tab-form-sub-heading">Parish</p>
+						<div class="select-wrapper position-relative">
+							<select class="form-select form-control" name="pselect" id="business-parish" name="<portlet:namespae/>businessparish" />
+								<option value="Kingston Parish">Kingston Parish</option>	
+								<option value="St. Andrew" >St. Andrew</option>	
+								<option value="Portland">Portland</option>	
+								<option value="St. Thomas">St. Thomas</option>	
+								<option value="St. Catherine">St. Catherine</option>	
+								<option value="St. Mary" >St. Mary</option>	
+								<option value="St. Ann">St. Ann</option>	
+								<option value="Manchester">Manchester</option>	
+								<option value="Clarendon">Clarendon</option>	
+								<option value="Hanover">Hanover</option>	
+								<option value="Westmoreland">Westmoreland</option>	
+								<option value="St. James">St. James</option>	
+								<option value="Trelawny">Trelawny</option>	
+								<option value="St. Elizabeth">St. Elizabeth</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Telephone Number</p>
+						<input type="text" class="form-control" id="business-telephone" placeholder="+1 876-876-1234" value="" name="<portlet:namespae/>businesstelephone"/>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<p class="tab-form-main-heading">ID Type</p>
+						<input type="text" class="form-control" id="id-type" placeholder="" value="" name="<portlet:namespae/>idtype"/>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<p class="tab-form-main-heading">ID Number</p>
+						<input type="text" class="form-control" id="id-number" placeholder="" value="" name="<portlet:namespae/>idnumber"/>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group mt-2">
+						<p class="tab-form-sub-heading">Gender</p>
+						<div class="select-wrapper position-relative">
+							<select class="form-select form-control" name="pselect" id="gender" name="<portlet:namespae/>gender">
+								<option value="Male">Male</option>	
+								<option value="Female" >Femaleoption>	
+								<option value="other">Other</option>	
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Date of Birth</p>
+						<input type="date" class="form-control" id="dob" placeholder="DD-MM-YYYY" value="" name="<portlet:namespae/>dateofbirth" />
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<p class="tab-form-main-heading">TRN (Taxpayer Registration Number)</p>
+						<input type="text" class="form-control" id="trn" placeholder="0000111122223333" value="" name="<portlet:namespae/>trn"/>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Cell Phone</p>
+						<input type="text" class="form-control" id="cell-phone" placeholder="+1 876-876-1234" value="" name="<portlet:namespae/>cellphone"/>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Fax</p>
+						<input type="text" class="form-control" id="fax" placeholder="" value="" name="<portlet:namespae/>fax"/>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<p class="tab-form-main-heading">Email address</p>
+						<input type="text" class="form-control" id="email" placeholder="info@companyname.jm" value="" name="<portlet:namespae/>email"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button type="button" class="btn btn-primary common-yellow-bg text-dark common-nav-links next-step float-right">
+		Continue to the next form section 
+		<span class="ml-2"> 
+			<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+	          	<pathd="M6.00016 11.17L1.83016 6.99997L0.410156 8.40997L6.00016 14L18.0002 1.99997L16.5902 0.589966L6.00016 11.17Z" fill="#1B1917" />
+	         </svg>
+		</span>
+	</button>
+</div></form>
+<script>
+function addStakeHolderInfo(){
+	companyName=$("#companyName").val();
+	firstName=$("#firstName").val();
+	middleName=$("#middleName").val();
+	lastName=$("#lastName").val();
+	alias=$("#alias").val();
+	residentialStreetName=$("#residential-steet").val();
+	residentialDistrict=$("#residential-district").val();
+	residentialPostOffice=$("#residential-post-ofc").val();
+	residentialParish=$("#residential-parish option:selected").text();
+	residentiaTelePhoneNumber=$("#residential-telephone").val();
+	businessStreetName=$("#business-steet").val();
+	businessDistrict=$("#business-district").val();
+	businessPostOffice=$("#business-post-ofc").val();
+	businessParish=$("#business-parish option:selected").text();
+	businessTelePhoneNumber=$("#business-telephone").val();
+    idType=$("#id-type").val();
+    idNumber=$("#id-number").val();
+	gender=$("#gender option:selected").text();
+	dateOfBirth=$("#dob").val();
+	trn=$("#trn").val();
+	cellPhone=$("#cell-phone").val();
+	fax=$("#fax").val();
+	emailAddress=$("#email").val();
+	}
+	
+	function StakeHolder(){
+		$.ajax({
+			type:"POST",
+			url:"${stakeHolderForm}",
+			data:{
+				"<portlet:namespae/>companyname":companyName,
+				"<portlet:namespae/>firstname":firstName,
+				"<portlet:namespae/>middlename":lastName,
+				"<portlet:namespae/>alias":alias,
+				"<portlet:namespae/>residentialstreet":residentialStreetName,			
+				"<portlet:namespae/>residentialdistrict":residentialDistrict,
+				"<portlet:namespae/>residentialpostoffice":residentialPostOffice,
+				"<portlet:namespae/>residentialparish":residentialParish,
+				"<portlet:namespae/>residentialtelephonenumber":residentiaTelePhoneNumber,
+				"<portlet:namespae/>businessstreetname":businessStreetName,
+				"<portlet:namespae/>businessdistrict":businessDistrict,
+				"<portlet:namespae/>businesspostoffice":businessPostOffice,
+				"<portlet:namespae/>businessparish":businessParish,
+				"<portlet:namespae/>businesstelephone":businessTelePhoneNumber,
+				"<portlet:namespae/>idtype":idType,
+				"<portlet:namespae/>idnumber": idNumber,
+				"<portlet:namespae/>gender":gender,
+				"<portlet:namespae/>dateofbirth":dateOfBirth,
+				"<portlet:namespae/>trn":trn,
+				"<portlet:namespae/>cellphone":cellPhone,
+				"<portlet:namespae/>fax":fax,
+				"<portlet:namespae/>email":emailAddress
+				
+			}})}</script>

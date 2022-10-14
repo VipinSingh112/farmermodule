@@ -1,0 +1,57 @@
+package FarmApplicationForm.portlet;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
+import com.liferay.portal.kernel.util.ParamUtil;
+
+import javax.portlet.PortletException;
+import javax.portlet.ResourceRequest;
+import javax.portlet.ResourceResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+import FarmApplicationForm.constants.ComNbpFarmApplicationFormWebPortletKeys;
+
+
+@Component(
+		immediate=true,
+		property= {
+				"javax.portlet.name=" + ComNbpFarmApplicationFormWebPortletKeys.COMNBPFARMAPPLICATIONFORMWEB,
+                "mvc.command.name=profileform"
+		},
+		service=MVCResourceCommand.class
+		)
+
+public class ProfileResourceCommand implements MVCResourceCommand{
+
+	@Override
+	public boolean serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
+			throws PortletException {
+		String respondent=ParamUtil.getString(resourceRequest, "respondent");
+		String manager=ParamUtil.getString(resourceRequest, "manager");
+		String liveonfarm=ParamUtil.getString(resourceRequest, "liveonfarm");
+		String livelihood=ParamUtil.getString(resourceRequest, "livelihood");
+		String educationLevel=ParamUtil.getString(resourceRequest, "educationlevel");
+		String mainoccupation=ParamUtil.getString(resourceRequest, "mainoccupation");
+		String agriInstitute=ParamUtil.getString(resourceRequest, "agriinstitute");
+		String qualification=ParamUtil.getString(resourceRequest, "qualification");
+		String agriTraining=ParamUtil.getString(resourceRequest, "agritraining");
+		String trainingMethod=ParamUtil.getString(resourceRequest, "trainingmethod");
+		String mainAgriActivity=ParamUtil.getString(resourceRequest, "mainagriactivity");
+		String nearestPoliceStation=ParamUtil.getString(resourceRequest, "nearestpolicestation");
+		String jasBranch=ParamUtil.getString(resourceRequest, "jasbranch");
+		String holdingStartYear=ParamUtil.getString(resourceRequest, "holdingstartyear");
+		String farmerType=ParamUtil.getString(resourceRequest, "farmertype");
+		String remarks=ParamUtil.getString(resourceRequest, "remarks");
+		String agriExtOfficerRADA=ParamUtil.getString(resourceRequest, "agriExtOfficerRADA");
+		String agriExtOfficerCommodityAssociation=ParamUtil.getString(resourceRequest, "agriExtOfficerCommodityAssociation");
+		String radio=ParamUtil.getString(resourceRequest, "radio");
+		String television=ParamUtil.getString(resourceRequest, "television");
+		String newspapersMagazines=ParamUtil.getString(resourceRequest, "newspapersMagazines");
+		String otherFarmers=ParamUtil.getString(resourceRequest, "otherFarmers");
+		String jas=ParamUtil.getString(resourceRequest, "jas");
+		String farmStore=ParamUtil.getString(resourceRequest, "farmStore");
+		String other=ParamUtil.getString(resourceRequest, "other");
+		return false;
+	}
+
+}

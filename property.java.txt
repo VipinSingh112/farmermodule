@@ -1,0 +1,44 @@
+package FarmApplicationForm.portlet;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
+import com.liferay.portal.kernel.util.ParamUtil;
+
+import javax.portlet.PortletException;
+import javax.portlet.ResourceRequest;
+import javax.portlet.ResourceResponse;
+
+import org.osgi.service.component.annotations.Component;
+
+import FarmApplicationForm.constants.ComNbpFarmApplicationFormWebPortletKeys;
+
+
+
+@Component(
+		immediate=true,
+		property= {
+				"javax.portlet.name=" + ComNbpFarmApplicationFormWebPortletKeys.COMNBPFARMAPPLICATIONFORMWEB,
+                 "mvc.resource.command=propertyform"
+		},
+service=MVCResourceCommand.class
+)
+public class PropertyResourceCommand implements MVCResourceCommand {
+
+	@Override
+	public boolean serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
+			throws PortletException {
+	String extension=ParamUtil.getString(resourceRequest, "extension");
+	String district=ParamUtil.getString(resourceRequest, "district");
+	String tenure=ParamUtil.getString(resourceRequest, "tenure");
+	String status=ParamUtil.getString(resourceRequest, "status");
+	String sizeArea=ParamUtil.getString(resourceRequest, "sizearea");
+	String sizeUnit=ParamUtil.getString(resourceRequest, "sizeunit");
+	String usageArea=ParamUtil.getString(resourceRequest, "usagearea");
+	String usageUnit=ParamUtil.getString(resourceRequest, "usageunit");
+	String volume=ParamUtil.getString(resourceRequest, "volume");
+	String folio=ParamUtil.getString(resourceRequest, "folio");
+	String distanceFromRoad=ParamUtil.getString(resourceRequest, "distancefromroad");
+	String remarks=ParamUtil.getString(resourceRequest, "remarks");
+		return false;
+	}
+
+}
