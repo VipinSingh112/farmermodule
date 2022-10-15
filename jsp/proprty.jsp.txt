@@ -164,39 +164,38 @@
 </div>
 
 <script>
+
+function addPropertyFormInfo(){
+	propertyExtension=$("#extension").val();
+	propertyDistrict=$("#district option:selected").text();
+	propertyTenure=$("#tenure").val();
+	propertyStatus=$("#status").val();
+	propertySizeArea=$("#sizeArea").val();
+	propertySizeUnit=$("#sizeUnits").val();
+	propertyUsageArea=$("#usageArea").val();
+	propertyUsageUnit=$("#usageUnit").val();
+	propertyvolume=$("#volume").val();
+	propertyFolio=$("#Folio").val();
+	propertyDistanceFromRoad=$("#distanceFromRoad").val();
+	propertyRemarks=$("#propertyRemarks").val();
+
+
 $.ajax({
 	type:"POST",
 	url:"${propertyURL}",
 	data:{
-		"<portlet:namespace/>extension":,
-		"<portlet:nameaspace/>district",
-		"<portlet:namaespace/>tenure":,
-		"<portlet:nameaspace/>status":,
-		"<portlet:nameaspace/>sizearea":,
-		"<portlet:nameaspace/>sizeunits":,
-		"<portlet:nameaspace/>usagearea":,
-		"<portlet:nameaspace/>usageunits":,
-		"<portlet:nameaspace/>volume":,
-		"<portlet:nameaspace/>folio":,
-		"<portlet:nameaspace/>distancefromroad":,
-		"<portlet:nameaspace/>remarks":,
-	}
-	
-	
-	
-	
-})
-
-
-
-
-
-
-
-
-
-
-
-
+		"<portlet:namespace/>extension":propertyExtension,
+		"<portlet:nameaspace/>district":propertyDistrict,
+		"<portlet:namaespace/>tenure":propertyTenure,
+		"<portlet:nameaspace/>status":propertyStatus,
+		"<portlet:nameaspace/>sizearea":propertySizeArea,
+		"<portlet:nameaspace/>sizeunits":propertySizeUnit,
+		"<portlet:nameaspace/>usagearea":propertyUsageArea,
+		"<portlet:nameaspace/>usageunits":propertyUsageUnit,
+		"<portlet:nameaspace/>volume":propertyvolume,
+		"<portlet:nameaspace/>folio":propertyFolio,
+		"<portlet:nameaspace/>distancefromroad":propertyDistanceFromRoad,
+		"<portlet:nameaspace/>remarks":propertyRemarks,
+	}})
 
 </script>

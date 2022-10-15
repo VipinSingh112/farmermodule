@@ -235,9 +235,7 @@ function addStakeHolderInfo(){
 	cellPhone=$("#cell-phone").val();
 	fax=$("#fax").val();
 	emailAddress=$("#email").val();
-	}
 	
-	function StakeHolder(){
 		$.ajax({
 			type:"POST",
 			url:"${stakeHolderForm}",
